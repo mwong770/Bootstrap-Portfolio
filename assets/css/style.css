@@ -12,6 +12,10 @@ body {
 	margin: 0 0 85px 0;
 }
 
+h1, h2, h3, span {
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
 body, a, #button {
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
@@ -31,12 +35,12 @@ body, a, #button {
 }
 
 /*text-align centers h1*/
-/*float none stops h1 name from stacking at > xs; default float is left*/
+/*width 100% to stop h1 name from stacking at > xs*/
 /*background-color to make box behind h1 green*/
 .navbar-header {
 	text-align: center;
-	float:none;
 	background-color: #4aaaa5;
+	width: 100%;
 }
 
 /*display inline-block to get h1 to touch the top; the default is display table*/
@@ -47,17 +51,12 @@ h1 {
 	font-size: 32px;
 	font-weight: bold;
 	margin: 0;
-	display:inline-block;
+	display: inline-block;
 }
 
 /*so edges on left and right of h1 at xs become green*/
 #head {
 	padding:0;
-}
-
-/*centers nav at col-xs*/
-.col-xs-center {
-	text-align: center;
 }
 
 /*div containing h2*/
@@ -76,6 +75,7 @@ li > a {
 	height: 75px;
 	padding: 20px  0 0 0;
 	margin-top: 0;
+	text-align: center;
 }
 
 /*makes all of the header background white except h1*/
@@ -85,12 +85,27 @@ li > a {
 
 a:hover {
 	color: #aa4a7d;
-	font-weight: bold;
 }
 
 #maincontent {
 	background-color: #ffffff;
-	margin-bottom: 20px;
+}
+
+.panel-title {
+	color: #4aaaa5;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+#mainbody {
+	margin: 10px 20px;
+}
+
+#maria {
+	max-height: 100%;
+	max-width: 100%;
+	margin-right: 25px;
+	margin-bottom: 5px;
 }
 
 p > a {
@@ -99,6 +114,91 @@ p > a {
 
 p {
 	line-height: 2;
+}
+
+#button {
+	background-color: #4aaaa5;
+	color: #ffffff;
+	font-size: medium;
+}
+
+#button:hover {
+	background-color: #aa4a7d;
+	color: #7daa4a;
+}
+
+#button:active {
+	background-image: url("../images/thanks.jpg");
+	background-color: #ffffff;
+	background-size: 75px 27px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: transparent;
+	border: solid 2px #4aaaa5;
+}
+
+#picrow {
+ 	margin-left: 10px;
+ 	margin-right: 10px;
+ }
+
+.projcontainer {
+}
+
+/*placeholders box with text*/
+.projects {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.projects:hover {
+	opacity: .5;
+}
+
+/*first placeholder*/
+#project1 {
+	margin: 10px 0 49px 0;
+}
+ 
+#project2 {
+	margin: 10px 0 49px 0;
+}
+
+#project3 {
+	margin: 0 0 49px 0;
+}
+
+#project4 {
+	margin: 0 0 49px 0;
+}
+
+#project5 {
+	margin: 0 0 25px 0;
+}
+
+/*all placeholders*/
+.holders {
+	width: 100%; 
+	height: 100%;
+}
+
+/*placeholder text*/
+.projects > span {
+	position: absolute;
+	bottom: 12px;
+	left: 0;
+	width: 100%;
+	background-color: #4aaaa5;
+	color: #ffffff;
+	text-align: center;
+	font-size: 20px;
+	padding: 15px;
+}
+
+#asidebody {
+	margin-top: 30px;
+	margin-bottom: 5px;
 }
 
 /*box containing icon and text*/
@@ -161,266 +261,7 @@ footer {
 	width: 100%;
 }
 
-/*****ALL ABOVE THIS WORKS ALL ABOVE THIS WORKS ALL ABOVE THIS WORKS ALL ABOVE THIS WORKS**/
-
-
-#maria {
-	max-height: 375px;
-	max-width: 375px;
-	margin:0 auto;
-	text-align:center;
-	/*float: left;
-	margin-right: 25px;*/
-}
-
-
-h2, h3 {
-	color: #4aaaa5;
-}
-
-
-h1, h2, h3, span {
-	font-family: 'Georgia', Times, Times New Roman, serif;
-}
 
 
 
-
-
-
-/*************************************************************************************
-
-
-
-
-
-
-
-
-@media (max-width:767px) { 
-	h1 {
-		color: red;
-		}
-	}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 768px) { h1 {color: orange;} }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 992px) { h1 {color: purple;} }
-
-@media (min-width: 1200px) { h1 {color: green;} }
-
-/*border and padding included in elements width and height
-so doesn't change when add border/padding*/
-/** {
-	box-sizing: border-box; 
-}*/
-/*
-
-
-h2 {
-	margin-left: 24px 24px 24px 0;
-	font-size: 30px;
-	display:block;/*********/
-/*}
-
-h3 {
-	border-bottom: solid #cccccc 2px;
-	padding: 0 0 20px 0;
-	text-align: left;
-	width: 175px;/*to shorten bottom border width*/
-/*}*/
-
-/*#middle {
-	overflow: auto;
-	width: 100%;
-	max-width: 960px;*//*why media queries don't work unless this is set to max but others not max*/
-/*	margin: 0 auto;
-}*/
-
-/*/*article, form, #portfolio {
-	float: left;
-	/*width: 100%;/**if make this one width 100% and/or max-width 650 768 stops working***/
-	/*width: 650px;*//****/
-	/*background-color: #ffffff;
-	margin: 0 20px 40px 20px;
-	border: solid 1px #dddddd;
-	overflow: auto;
-	padding: 10px 30px 30px 30px;
-}*/
-
-/*.maincontent {
-	border-top: solid #dddddd 3px;
-	padding-top: 25px;
-}
-
-p > a {
-	color: #4aaaa5;
-}**//*/
-
-/*#formcontent {
-	padding-top: 10px;
-}
-
-#maria {
-	height: 200px;
-	width: 200px;
-	float: left;
-	margin-right: 25px;
-}
-
-p {
-	line-height: 2;
-}
-
-to remove the default inline-block display
-label, input, textarea {
-	display: block;
-	width: 100%;
-}
-
-input {
-	padding: 6px 0 6px 10px;
-	line-height: 1.5;
-	margin-top: 8px;
-}*/
-
-/*textarea {
-	height: 200px;
-	margin-top: 8px;
-}
-
-label, textarea {
-	padding-top: 18px;
-}
-
-#button {
-	background-color: #4aaaa5;
-	height: 40px;
-	width: 100px;
-	color: #ffffff;
-	font-size: medium;
-	padding: 6px 0;
-	margin-top: 15px;
-}
-
-#button:hover {
-	background-color: #aa4a7d;
-	color: #7daa4a;
-}*/
-
-/*active must come after hover to work*/
-/*#button:active {
-	background-image: url("../images/thanks.jpg");
-	background-color: #ffffff;
-	background-size: 75px 27px;
-	background-position: center center;
-	background-repeat: no-repeat;
-	color: transparent;
-	border: solid 2px #4aaaa5;
-}*/
-
-/*placeholders box with text*/
-/*.projects {
-	float: left;
-	position: relative;
-	width: 275px;
-	height: 206px;*/
-	/*width: 45%;*/  /*percent doesn't account for height ratio*/
-	/*display: inline-block;*/ /***********/
-	/*overflow: auto;*/ /************/
-	/*}*/
-/*
-.projects:hover {
-	opacity: .5;
-}
-*/
-/*first placeholder*/
-/*#project1 {
-	margin: 10px 0 49px 0;
-}
- 
-#project2 {
-	margin: 10px 0 49px 37px;
-}
-
-#project3 {
-	margin: 0 0 49px 0;
-}
-
-#project4 {
-	margin: 0 0 49px 37px;
-}
-
-#project5 {
-	margin: 0 0 25px 0;
-}*/
-
-/*all placeholders*/
-/*.holders {
-	width: 100%; */ /*how does it know to fill the height; is there a default setting*/
-/*}*/
-
-/*placeholder text*/
-/*.projects > span {
-	position: absolute;
-	bottom: 25px;
-	left: 0;
-	width: 100%;
-	background-color: #4aaaa5;
-	color: #ffffff;
-	text-align: center;
-	font-size: 20px;
-	padding: 15px;
-}*/
-
-/*box holding all social links and hover text*/
-/*#online {
-	float: left;
-	padding-top: 5px;
-}*/
-
-/*box containing icon and text*/
-/*.iconbox {
-	position: relative;
-	width: 52px;
-	height: 52px;
-	float: left;
-	margin: 0 5px;
-	background-size: 52px 52px;
-}*/
-
-/*to make anchors to social links clickable*/
-/*.image {
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-#github {
-	background-image: url("../images/github.png");	
-}
-
-#linkedin {
-	background-image: url("../images/linkedin.png");
-}
-
-#stackoverflow {
-	background-image: url("../images/stackoverflow.png");	
-}
-
-
-
-aside {
-	float: left;
-	width: 270px;
-	background-color: #ffffff;
-	border: solid 1px #dddddd;
-	padding: 10px 30px 30px 40px;
-}
-
-h3 {
-	font-size: 20px;
-}*/
 
